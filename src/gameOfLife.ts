@@ -1,5 +1,5 @@
 
-type Board = Array<Array<number>>;
+export type Board = Array<Array<number>>;
 type Neighbors = Array<number>;
 
 enum NeighborState {
@@ -25,6 +25,10 @@ export const mkRandomState = (max: number) => {
 
 export const printBoard = (board: Board) => {
   console.log(`${board.map(row => row.join(' ')).join('\n')}`);
+}
+
+export const printQtBoard = (board: Board) => {
+  console.log(`${board.map(row => row.map(x => x ? '#' : ' ').join(' ')).join('\n')}`)
 }
 
 export const getNeighbors = (board: Board) => (x: number, y: number): Neighbors => {
@@ -77,5 +81,6 @@ export default {
   printBoard,
   getNeighbors,
   mkDelta,
-  mkNextBoardState
+  mkNextBoardState,
+  printQtBoard
 }
