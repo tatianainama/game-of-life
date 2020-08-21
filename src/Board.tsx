@@ -7,7 +7,7 @@ type props = {
   board: Array<Array<number>>
 }
 
-export const SketchBoard: FunctionComponent<props> = ({ width, height, cellSize, board }) => {
+export const Board: FunctionComponent<props> = ({ width, height, cellSize, board }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   
   useEffect(() => {
@@ -33,4 +33,4 @@ export const SketchBoard: FunctionComponent<props> = ({ width, height, cellSize,
   )
 }
 
-export default SketchBoard;
+export default Board;

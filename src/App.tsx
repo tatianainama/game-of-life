@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect, CSSProperties } from 'react';
 import { mkNextBoardState, Board, mkBoard, mkRandomState } from 'gameOfLife';
-import SketchBoard from 'SketchBoard';
+import { Board as BoardComponent } from 'Board';
 
 export const App = () => {
   const sketchStyles: CSSProperties = {
@@ -44,7 +44,7 @@ export const App = () => {
       <div ref={ref} style={sketchStyles}>
           {
             size.width !== 0 ? (
-              <SketchBoard
+              <BoardComponent
                 board={board}
                 cellSize={12}
                 height={size.height}
