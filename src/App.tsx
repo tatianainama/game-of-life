@@ -24,7 +24,6 @@ export const App = () => {
       });
       const b = mkBoard(Math.trunc(ref.current.offsetHeight/12), Math.trunc(ref.current.offsetWidth/12), () => mkRandomState(2));
       setBoard(b);
-      console.log(b)
     }
   }, [ref]);
 
@@ -32,7 +31,6 @@ export const App = () => {
     const next = mkNextBoardState(board);
     setBoard(next);
     if (next.toString() !== board.toString()) {
-      console.log('next')
       setTimeout(() => playGame(next), 400);
     } else {
       return;
