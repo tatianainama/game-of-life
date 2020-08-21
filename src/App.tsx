@@ -3,6 +3,7 @@ import { mkNextBoardState, Board, mkBoard, mkRandomState } from 'gameOfLife';
 import { Board as BoardComponent } from 'Board';
 
 export const App = () => {
+  const CELL_SIZE = 12;
   const sketchStyles: CSSProperties = {
     width: '100%',
     height: '50vh'
@@ -46,7 +47,7 @@ export const App = () => {
             size.width !== 0 ? (
               <BoardComponent
                 board={board}
-                cellSize={12}
+                cellSize={CELL_SIZE}
                 height={size.height}
                 width={size.width}
               />
