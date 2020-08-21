@@ -82,5 +82,5 @@ export default {
   getNeighbors,
   mkDelta,
   mkNextBoardState,
-  printQtBoard
+  printQtBoard,
 }
